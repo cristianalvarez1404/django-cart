@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models import Store
+from .models import Product
 
-class StoreAdmin(admin.ModelAdmin):
+class ProductAdmin(admin.ModelAdmin):
   list_display = ('product_name','slug','price','stock','category','created_date','modified_date','is_available')
   prepopulated_fields = {'slug':('product_name',)}
 
-admin.site.register(Store,StoreAdmin)
+admin.site.register(Product,ProductAdmin)
